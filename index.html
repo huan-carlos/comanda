@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Comanda</title>
+</head>
+<style type="text/css">
+	body{
+		text-align: center;
+	}
+	table, th, td {
+	 	border: 2px solid grey;
+	 	border-collapse: collapse;
+	 	margin: auto;
+	}
+	th, td {
+  		padding: 5px;
+  		
+	}
+	button{
+
+		background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+		background-color:#79bbff;
+		border-radius:6px;
+		border:1px solid #84bbf3;
+		margin:2px;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 18px;
+		text-decoration:none;
+		
+	}
+	 input{
+	 	text-align: center;
+	 	font-size: 16px;
+	 	width: 60px;
+	 }
+	 img{
+	 	width: 150px;
+	 	
+	 }
+</style>
+<body>
+	<table id="myTable">
+		<tr>
+			<th>Pedido</th>
+			<th>Preço</th>
+			<th>Quantidade</th>
+		</tr>
+		<tr>
+			<th colspan="3">Porção</th>
+		</tr>
+		<tr>
+			<td><img src="img/1.jpg"><br>Batata Frita</td>
+			<td>R$<a class="preco">20,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(1)">+</button><button onclick="lass(1)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/2.jpg"><br>Mandioquinha Frita</td>
+			<td>R$<a class="preco">20,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(2)">+</button><button onclick="lass(2)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/3.jpg"><br>Porção de Pastéis</td>
+			<td>R$<a class="preco">20,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(3)">+</button><button onclick="lass(3)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/4.jpg"><br>Porção de Calabresa</td>
+			<td>R$<a class="preco">20,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(4)">+</button><button onclick="lass(4)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/5.jpg"><br>Filé de Tilápia</td>
+			<td>R$<a class="preco">25,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(5)">+</button><button onclick="lass(5)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/6.jpg"><br>Bolinho de Bacalhau</td>
+			<td>R$<a class="preco">25,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(6)">+</button><button onclick="lass(6)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/7.jpg"><br>Frango a Passarinho</td>
+			<td>R$<a class="preco">24,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(7)">+</button><button onclick="lass(7)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/8.jpg"><br>Costelinha de Porco</td>
+			<td>R$<a class="preco">24,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(8)">+</button><button onclick="lass(8)">-</button></td>
+		</tr>
+		<tr>
+			<th colspan="3">Espetinho Completo</th>
+		</tr>
+		<tr>
+			<td><img src="img/9.jpg"><br>Picanha</td>
+			<td>R$<a class="preco">25,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(9)">+</button><button onclick="lass(9)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/10.jpg"><br>Contra Filé</td>
+			<td>R$<a class="preco">23,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(10)">+</button><button onclick="lass(10)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/11.jpg"><br>Filé com Bacon</td>
+			<td>R$<a class="preco">23,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(11)">+</button><button onclick="lass(11)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/12.jpg"><br>Cupim</td>
+			<td>R$<a class="preco">18,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(12)">+</button><button onclick="lass(12)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/13.jpg"><br>Káfta</td>
+			<td>R$<a class="preco">16,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(13)">+</button><button onclick="lass(13)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/14.jpg"><br>Frango com Bacon</td>
+			<td>R$<a class="preco">16,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(14)">+</button><button onclick="lass(14)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/15.jpg"><br>Queijo</td>
+			<td>R$<a class="preco">16,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(15)">+</button><button onclick="lass(15)">-</button></td>
+		</tr>
+		<tr>
+			<th colspan="3">Espetinho Simples</th>
+		</tr>
+		<tr>
+			<td><img src="img/16.jpg"><br>Picanha</td>
+			<td>R$<a class="preco">9,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(16)">+</button><button onclick="lass(16)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/17.jpg"><br>Contra Filé</td>
+			<td>R$<a class="preco">7,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(17)">+</button><button onclick="lass(17)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/18.jpg"><br>Filé com Bacon</td>
+			<td>R$<a class="preco">8,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(18)">+</button><button onclick="lass(18)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/19.jpg"><br>Cupim</td>
+			<td>R$<a class="preco">6,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(19)">+</button><button onclick="lass(19)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/20.jpg"><br>Káfta</td>
+			<td>R$<a class="preco">5,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(20)">+</button><button onclick="lass(20)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/21.jpg"><br>Frango com Bacon</td>
+			<td>R$<a class="preco">6,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(21)">+</button><button onclick="lass(21)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/22.jpg"><br>Queijo</td>
+			<td>R$<a class="preco">6,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(22)">+</button><button onclick="lass(22)">-</button></td>
+		</tr>
+		<tr>
+			<th colspan="3">Bebidas</th>
+		</tr>
+		<tr>
+			<td><img src="img/23.jpg"><br>Chopp Brahma</td>
+			<td>R$<a class="preco">12,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(23)">+</button><button onclick="lass(23)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/24.jpg"><br>Cerveja Lata</td>
+			<td>R$<a class="preco">5,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(24)">+</button><button onclick="lass(24)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/25.jpg"><br>Cerveja Longneck</td>
+			<td>R$<a class="preco">8,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(25)">+</button><button onclick="lass(25)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/26.png"><br>Cerveja 600</td>
+			<td>R$<a class="preco">12,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(26)">+</button><button onclick="lass(26)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/27.jpg"><br>Refrigerante Lata</td>
+			<td>R$<a class="preco">6,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(27)">+</button><button onclick="lass(27)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/28.jpg"><br>Refrigerante 600</td>
+			<td>R$<a class="preco">7,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(28)">+</button><button onclick="lass(28)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/29.jpg"><br>Refrigerante 1L</td>
+			<td>R$<a class="preco">8,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(29)">+</button><button onclick="lass(29)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/30.jpg"><br>Refrigerante 2L</td>
+			<td>R$<a class="preco">12,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(30)">+</button><button onclick="lass(30)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/31.jpg"><br>Suco no Copo</td>
+			<td>R$<a class="preco">8,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(31)">+</button><button onclick="lass(31)">-</button></td>
+		</tr>
+		<tr>
+			<td><img src="img/32.jpg"><br>Suco na Jarra</td>
+			<td>R$<a class="preco">12,00</a></td>
+			<td><input disabled="true" class="item"><button onclick="add(32)">+</button><button onclick="lass(32)">-</button></td>
+		</tr>
+	</table>
+	<button id="go">Efeturar Pedido</button>
+	<script type="text/javascript">
+		function add(num){
+			var x = document.getElementsByClassName("item");
+			x[num-1].value++;
+		}
+		function lass(num){
+			var x = document.getElementsByClassName("item");
+			x[num-1].value--;
+			if (x[num-1].value<0) {x[num-1].value=0;}
+		}
+		var calcular = document.getElementById('go');
+		calcular.onclick = function(){
+			var preco = document.getElementsByClassName("preco");
+			var qtd = document.getElementsByClassName("item");
+			var tabela = document.getElementById("myTable");
+			var valor = [];
+			for (var i = 0; i < qtd.length; i++) {
+				valor[i] = qtd[i].value * parseFloat(preco[i].innerHTML);
+			}
+			var total = valor.reduce(function(total, valor){
+				return total + valor;
+			}, 0);
+			for(var i=0;i<32;i++){
+				if(qtd[i].value==0){
+					tabela.deleteRow(i+2);
+				}
+			}
+		}
+	</script>
+</body>
+</html>
