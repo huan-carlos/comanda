@@ -21,16 +21,17 @@ button{
     cursor:pointer;
     color:#ffffff;
     font-family:Arial;
-    font-size:50px;
+    font-size:100px;
     font-weight:bold;
     padding:6px 18px;
     text-decoration:none;
+    width: 50%;
 }
 input{
     text-align: center;
-    font-size: 50px;
-    width: 60px;
+    font-size: 100%;
+    width: 50%;
 }
 img{
-    width: 200px;
+    width: 50%;
 }
