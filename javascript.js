@@ -67,7 +67,7 @@ calcular.onclick = function(){
         }
         //mostra o total da comanda
         var aux1 = document.createElement('h2');
-        var aux2 = document.createTextNode('Total: R$'+total);
+        var aux2 = document.createTextNode('Total: R$'+total.toFixed(2));
         aux1.appendChild(aux2);
         corpo[0].appendChild(aux1);
     }
